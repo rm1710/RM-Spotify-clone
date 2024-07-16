@@ -3,12 +3,12 @@ import { assets, songsData } from '../assets/assets'
 
 const Player = () => {
     return (
-        <div className='h-[10%] bg-black flex justify-between items-center text-white px-4'>
+        <div className='fixed bottom-0 left-0 w-full h-[10%] bg-black flex justify-between items-center text-white px-4'>
             <div className='hidden lg:flex items-center gap'>
                 <img className='w-12' src={songsData[0].image} alt="" />
                 <div>
-                    <p>{songsData[0].name}</p>
-                    <p>{songsData[0].desc.slice(0,12)}</p>
+                    <p>&nbsp;{songsData[0].name} </p>
+                    <p>&nbsp;{songsData[0].desc.slice(0,12)}</p>
                 </div>
             </div>
             <div className='flex flex-col items-center gap-1 m-auto'>
