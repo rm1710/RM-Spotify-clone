@@ -1,12 +1,17 @@
-import { createContext } from "react";
+import { createContext, useRef } from "react";
 
-
-const PlayerContext = createContext();
+export const PlayerContext = createContext();
 
 const PlayerContextProvider=(props) => {
 
+    const audioRef = useRef();
+    const seekBg = useRef();
+    const seekBar = useRef();
+
     const contextValue = {
-        
+        audioRef,
+        seekBar,
+        seekBg
     }
     return (
         <PlayerContext.Provider value={contextValue}>
@@ -14,4 +19,6 @@ const PlayerContextProvider=(props) => {
         </PlayerContext.Provider>
     )
 }
+
+export default PlayerContextProvider;
 
